@@ -28,6 +28,10 @@
                 font-style: normal;
             }
 
+            body {
+                background: #f6f6f6;
+            }
+
             .reveal {
                 color: #767676;
                 font-family: 'Secca Std';
@@ -44,14 +48,24 @@
                 font-family: inherit;
             }
 
-            .reveal li {
-                color: #13daec;
+            .reveal h1 {
+                /*
+                text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+                */
+                text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 0px 0 #aaaaaa, 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
             }
 
-            .reveal li span {
+            .reveal li .grey-text {
                 color: #767676;
+            }
+
+            .reveal li span, .reveal p {
                 font-size: 30px;
                 line-height: 1.3em;
+            }
+
+            .reveal li, .blue-text {
+                color: #13daec;
             }
 
             ::selection {
@@ -60,7 +74,7 @@
 
             /**/
 
-            .normal-mode, .print-pdf .print-mode, .print-pdf .slide-number {
+            .normal-mode, .print-pdf .print-mode, .print-pdf .slide-number, .slide-0 .slide-number {
                 display: none;
             }
 
@@ -70,6 +84,10 @@
 
             .hyperlink {
                 font-size: 30px !important;
+            }
+
+            .justified-text {
+                text-align: justify;
             }
         </style>
 
@@ -93,110 +111,216 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-                <section data-background="#F6F6F6">
+                <section>
                     <h1>Hack Day - 2 May 2014</h1>
                     <a class="normal-mode hyperlink" href="?#">(Normal Mode)</a>
                     <a class="print-mode hyperlink" href="?print-pdf#">(Print Mode)</a>
                 </section>
-                <section data-background="#F6F6F6">
+                <section>
                     <ul>
-                        <li><span>SASS vs LESS</span></li>
-                        <li><span>Foundation 5 vs Bootstrap vs Semantic UI</span></li>
-                        <li><span>Sublime Text 3 vs Notepad++ vs PHPStorm vs Adobe Brackets vs GitHub’s Atom text editor
-                            <ul><li><span>Sublime packages vs Notepad++ plugins</span></li></ul>
+                        <li><span class="grey-text">SASS vs LESS</span></li>
+                        <li><span class="grey-text">Foundation 5 vs Twitter Bootstrap vs Semantic UI</span></li>
+                        <li><span class="grey-text">Sublime Text 3 vs Notepad++ vs PHPStorm vs Adobe Brackets vs GitHub’s Atom text editor
+                            <ul><li><span class="grey-text">Sublime packages vs Notepad++ plugins</span></li></ul>
                         </span></li>
-                        <li><span>Grunt vs Gulp</span></li>
-                        <li><span>Bower vs Component</span></li>
-                        <li><span>Yeoman vs Brunch vs Lineman</span></li>
-                        <li><span>Heroku vs Nodejitsu vs AppFog</span></li>
-                        <li><span>Angular.js vs Ember.js vs Backbone.js</span></li>
-                        <li><span>Handlebars.js vs. Hogan.js vs. Mustache.js vs. jsRender vs Dust.js vs Underscore.js</span></li>
-                        <li><span>Require.js vs Browserify vs Common.js</span></li>
-                        <li><span>Dalek.js</span></li>
-                        <li><span>Laravel 4 vs Symfony</span></li>
-                        <li><span>jQuery vs Zepto vs MooTools</span></li>
-                        <li><span>ShiftEdit vs  Cloud9 vs Koding vs Coda</span></li>
-                        <li><span>CodePen vs JsFiddle vs JsBin vs CSS Deck</span></li>
+                        <li><span class="grey-text">Grunt vs Gulp</span></li>
+                        <li><span class="grey-text">Bower vs Component</span></li>
+                        <li><span class="grey-text">Yeoman vs Brunch vs Lineman.js</span></li>
+                        <li><span class="grey-text">Heroku vs Nodejitsu vs AppFog</span></li>
+                        <li><span class="grey-text">Angular.js vs Ember.js vs Backbone.js</span></li>
+                        <li><span class="grey-text">Handlebars.js vs. Hogan.js vs. Mustache.js vs. jsRender vs Dust.js vs Underscore.js</span></li>
+                        <li><span class="grey-text">Require.js vs Browserify vs Common.js</span></li>
+                        <li><span class="grey-text">Dalek.js</span></li>
+                        <li><span class="grey-text">Laravel 4 vs Symfony</span></li>
+                        <li><span class="grey-text">jQuery vs Zepto vs MooTools</span></li>
+                        <li><span class="grey-text">ShiftEdit vs  Cloud9 vs Koding vs Coda 2</span></li>
+                        <li><span class="grey-text">CodePen vs JsFiddle vs JsBin vs CSS Deck</span></li>
+                        <li><span class="grey-text">Dploy vs Snap CI vs Travis CI</span></li>
                     </ul>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>sass.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>less.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">What is a hack day?</span></li>
+                    </ul>
+                    <p>A hackathon is an event in which computer programmers and others involved in software development, including graphic designers, interface designers and project managers, collaborate intensively on software projects. Occasionally, there is a hardware component as well.</p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>foundation.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>twitter-bootstrap.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>semantic-ui.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">What is the procedure?</span>
+                            <ul><li><span class="grey-text">Split up into groups of 2 or 3</span></li></ul>
+                        </li>
+                    </ul>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>sublime-text.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>notepad++.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>phpstorm.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>brackets.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>atom.png">
+                <section class="justified-text">
+                    <ul>
+                        <li><span class="blue-text">Continuous Integration</span></li>
+                            <ul><li><a href="http://www.thoughtworks.com/continuous-integration">http://www.thoughtworks.com/continuous-integration</a></li></ul>
+                        </li>
+                    </ul>
+                    <p>Continuous Integration (CI) is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early.</p>
+                    <p>By integrating regularly, you can detect errors quickly, and locate them more easily.</p>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <p>...</p>
+                <section>
+                    <ul>
+                        <li><span class="blue-text">CSS Preprocessors</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://sass-lang.com/" target="_blank"><a href="" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>sass.png"></a>
+                        <a href="http://lesscss.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>less.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>grunt.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>gulp.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Front-end Frameworks</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://foundation.zurb.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>foundation.png"></a>
+                        <a href="http://getbootstrap.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>twitter-bootstrap.png"></a>
+                        <a href="http://semantic-ui.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>semantic-ui.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>bower.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>component.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Text Editors / IDEs</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://www.sublimetext.com/3" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>sublime-text.png"></a>
+                        <a href="http://notepad-plus-plus.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>notepad++.png"></a>
+                        <a href="http://www.jetbrains.com/phpstorm/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>phpstorm.png"></a>
+                        <a href="http://brackets.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>brackets.png"></a>
+                        <a href="https://atom.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>atom.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>yeoman.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>brunch.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>lineman.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Task Runners</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://gruntjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>grunt.png"></a>
+                        <a href="http://gulpjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>gulp.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>heroku.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>nodejitsu.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>appfog.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Package Managers</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://bower.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>bower.png"></a>
+                        <a href="http://component.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>component.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>angularjs.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>emberjs.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>backbonejs.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Scaffolding Tools</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://yeoman.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>yeoman.png"></a>
+                        <a href="http://brunch.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>brunch.png"></a>
+                        <a href="http://www.linemanjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>linemanjs.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>handlebarsjs.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>hoganjs.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>mustachejs.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>jsrender.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>dustjs.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>underscorejs.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Cloud Platforms</span></li>
+                    </ul>
+                    <p>
+                        <a href="https://www.heroku.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>heroku.png"></a>
+                        <a href="https://www.nodejitsu.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>nodejitsu.png"></a>
+                        <a href="https://www.appfog.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>appfog.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>requirejs.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>browserify.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>commonjs.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">JavaScript MVW Frameworks</span></li>
+                    </ul>
+                    <p>
+                        <a href="https://angularjs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>angularjs.png"></a>
+                        <a href="http://emberjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>emberjs.png"></a>
+                        <a href="http://backbonejs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>backbonejs.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>dalekjs.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">JavaScript Templating Engines</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://handlebarsjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>handlebarsjs.png"></a>
+                        <a href="http://twitter.github.io/hogan.js/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>hoganjs.png"></a>
+                        <a href="http://mustache.github.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>mustachejs.png"></a>
+                        <a href="http://www.jsviews.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jsrender.png"></a>
+                        <a href="http://akdubya.github.io/dustjs/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>dustjs.png"></a>
+                        <a href="http://underscorejs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>underscorejs.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>laravel4.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>symfony.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">JavaScript File and Module Loaders</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://requirejs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>requirejs.png"></a>
+                        <a href="http://browserify.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>browserify.png"></a>
+                        <a href="http://www.commonjs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>commonjs.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>jquery.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>zepto.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>mootools.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Automated Testing</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://dalekjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>dalekjs.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>shiftedit.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>cloud9.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>koding.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>coda.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">PHP Frameworks</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://laravel.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>laravel4.png"></a>
+                        <a href="http://symfony.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>symfony.png"></a>
+                    </p>
                 </section>
-                <section data-background="#F6F6F6">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>codepen.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>jsfiddle.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>jsbin.png">
-                    <img src="<?php echo LOGOS_IMAGES_PATH ?>cssdeck.png">
+                <section>
+                    <ul>
+                        <li><span class="blue-text">JavaScript Libraries</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://jquery.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jquery.png"></a>
+                        <a href="http://zeptojs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>zepto.png"></a>
+                        <a href="http://mootools.net/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>mootools.png"></a>
+                    </p>
+                </section>
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Cloud Editors/IDEs</span></li>
+                    </ul>
+                    <p>
+                        <a href="https://shiftedit.net/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>shiftedit.png"></a>
+                        <a href="https://c9.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>cloud9.png"></a>
+                        <a href="https://koding.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>koding.png"></a>
+                        <a href="https://panic.com/coda/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>coda.png"></a>
+                    </p>
+                </section>
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Code Playgrounds</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://codepen.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>codepen.png"></a>
+                        <a href="http://jsfiddle.net/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jsfiddle.png"></a>
+                        <a href="http://jsbin.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jsbin.png"></a>
+                        <a href="http://cssdeck.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>cssdeck.png"></a>
+                    </p>
+                </section>
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Continuous Deployment Platforms</span></li>
+                    </ul>
+                    <p>
+                        <a href="http://dploy.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>dploy.png"></a>
+                        <a href="http://snap-ci.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>snapci.png"></a>
+                        <a href="http://travis-ci.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>travisci.png"></a>
+                    </p>
                 </section>
             </div>
         </div><!-- .reveal -->
