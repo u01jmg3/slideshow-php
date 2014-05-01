@@ -138,12 +138,12 @@
                         <li><span class="blue-text">So, what is a hack day?</span>
 							<ul>
 								<li><span class="grey-text">Any number of developers split into teams</span></li>
-								<li><span class="grey-text">A subject, challenge, dataset (the broader the better) is set</span>
+								<li><span class="grey-text">A subject, challenge (the broader the better) is set</span>
 									<ul>
 										<li><span class="grey-text">Developers are given a brief of the subject or challenge at the beginning of the day but it is up to them to interpret it</span></li>
 									</ul>
 								</li>
-								<li><span class="grey-text">They code/design/engineer over the course of a free form period to create prototype solutions</span></li>
+								<li><span class="grey-text">They code/design/engineer - over the course of a free form period - to create prototype solutions</span></li>
 								<li><span class="grey-text">They present back to their hack peers, any inquisitive viewers and the judge</span></li>
 								<li><span class="grey-text">A prize is awarded</span></li>
 								<li><span class="grey-text">Pizza is essential</span></li>
@@ -161,12 +161,12 @@
 										<li><span class="grey-text">1 being your favourite</span></li>
 									</ul>
 								</li>
-								<li><span class="grey-text">You will be split up into teams of 3 or 4</span>
+								<li><span class="grey-text">You will be split into teams of 3 or 4 people</span>
 									<ul>
 										<li><span class="grey-text">A team will have at least 2 members</span></li>
 									</ul>
 								</li>
-								<li><span class="grey-text">Following the schedule on the next slide let your creativity begin</span></li>
+								<li><span class="grey-text">Following the schedule on the next slide let your creativity begin!</span></li>
 								<br />
 								<p><span class="grey-text">(These slides are available online for reference)</span></p>
 							</ul>
@@ -625,7 +625,7 @@
 								<li><span class="grey-text">Automate the build</span></li>
 								<li><span class="grey-text">Make your build self-testing</span></li>
 								<li><span class="grey-text">Automate deployment</span></li>
-								<li><span class="grey-text">...</span></li>
+								<li><span class="grey-text">etc...</span></li>
 							</ul>
 						</li>
 					</ul>
@@ -637,6 +637,7 @@
 								<li><span class="grey-text">Created a template project with correct configuration</span>
 									<ul><li><span class="grey-text">Can be re-used in future presentations</span></li></ul>
 								</li>
+								<li><span class="grey-text">Fed back 3 fixes (via a pull request) to the author of reveal.js</span></li>
 								<li><span class="grey-text">Repo synced to GitHub</span></li>
 								<li><span class="grey-text">Hosted in Heroku</span></li>
 								<li><span class="grey-text">Commits automatically refresh live version stored in Heroku using Snap CI</span></li>
