@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Hack Day - 2 May 2014</title>
+        <title>Hack Day Part I &middot; 2 May 2014</title>
 
         <meta name="description" content="Our first Hack Day">
         <meta name="author" content="Jonathan Goode">
@@ -15,6 +15,7 @@
         ?>
 
         <link rel="stylesheet" href="<?php echo CSS_PATH ?>reveal.css">
+        <link rel="stylesheet" href="<?php echo CSS_PATH ?>bootstrap.css">
         <link rel="stylesheet" href="<?php echo THEME_CSS_PATH ?>default.css" id="theme">
 
         <!-- For syntax highlighting -->
@@ -65,7 +66,7 @@
             }
 
             .reveal li, .blue-text {
-                color: #13daec;
+                color: #13daec !important;
             }
 
             ::selection {
@@ -89,6 +90,16 @@
             .justified-text {
                 text-align: justify;
             }
+
+            <?php
+				if(date('Ymd') == date('Ymd', strtotime('2014-05-02'))){
+			?>
+			.highlight {
+				color: #13daec;
+			}
+			<?php
+				}
+			?>
         </style>
 
         <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -112,11 +123,58 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Hack Day - 2 May 2014</h1>
-                    <a class="normal-mode hyperlink" href="?#">(Normal Mode)</a>
-                    <a class="print-mode hyperlink" href="?print-pdf#">(Print Mode)</a>
+					<h1>Hack Day Part I</h1>
+					<h2>2 May 2014</h2>
+                    <!--
+					<p>
+						<a class="normal-mode hyperlink" href="?#">(Normal Mode)</a>
+						<a class="print-mode hyperlink" href="?print-pdf#">(Print Mode)</a>
+					</p>
+					-->
+					<p><img src="<?php echo IMAGES_PATH ?>welcome.png"></p>
                 </section>
                 <section>
+                    <ul>
+                        <li><span class="blue-text">So, what is a hack day?</span>
+							<ul>
+								<li><span class="grey-text">Any number of developers split into teams</span></li>
+								<li><span class="grey-text">A subject, challenge, dataset (the broader the better) is set</span>
+									<ul>
+										<li><span class="grey-text">Developers are given a brief of the subject or challenge at the beginning of the day but it is up to them to interpret it</span></li>
+									</ul>
+								</li>
+								<li><span class="grey-text">They code/design/engineer over the course of a free form period to create prototype solutions</span></li>
+								<li><span class="grey-text">They present back to their hack peers, any inquisitive viewers and the judge</span></li>
+								<li><span class="grey-text">A prize is awarded</span></li>
+								<li><span class="grey-text">Pizza is essential</span></li>
+							</ul>
+						</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li><span class="blue-text">How will our hack day work?</span>
+                            <ul>
+								<li><span class="grey-text">We will <em>evaluate</em> and <em>compare</em> current web tools to see whether they can improve the way we develop and the quality of code we produce</span></li>
+								<li><span class="grey-text">For allocation, mark on your sheet the 3 tools you are most interested in</span>
+									<ul>
+										<li><span class="grey-text">1 being your favourite</span></li>
+									</ul>
+								</li>
+								<li><span class="grey-text">You will be split up into teams of 3 or 4</span>
+									<ul>
+										<li><span class="grey-text">A team will have at least 2 members</span></li>
+									</ul>
+								</li>
+								<li><span class="grey-text">Following the schedule on the next slide let your creativity begin</span></li>
+								<br />
+								<p><span class="grey-text">(These slides are available online for reference)</span></p>
+							</ul>
+                        </li>
+                    </ul>
+                </section>
+                <!--
+				<section>
                     <ul>
                         <li><span class="grey-text">SASS vs LESS</span></li>
                         <li><span class="grey-text">Foundation 5 vs Twitter Bootstrap vs Semantic UI</span></li>
@@ -138,36 +196,261 @@
                         <li><span class="grey-text">Dploy vs Snap CI vs Travis CI</span></li>
                     </ul>
                 </section>
+				-->
+				<section>
+					<h2>Today's Schedule</h2>
+					<table class="table table-responsive">
+						<thead>
+							<tr>
+								<th>Task</th>
+								<th>Start Time</th>
+								<th>End Time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+								date_default_timezone_set('Europe/London');
+								$now     = date_create('now');
+
+								$start   = date_create('now');
+								$start->setTime(10, 15);
+								$end     = date_create('now');
+								$end->setTime(10, 30);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Welcome Presentation</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(10, 35);
+								$end     = date_create('now');
+								$end->setTime(10, 45);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Group Allocation</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(10, 45);
+								$end     = date_create('now');
+								$end->setTime(11, 30);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Begin Hack</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(11, 30);
+								$end     = date_create('now');
+								$end->setTime(11, 40);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td><em>Morning Break</em></td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(11, 40);
+								$end     = date_create('now');
+								$end->setTime(12, 30);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Hack Continues</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(12, 30);
+								$end     = date_create('now');
+								$end->setTime(13, 00);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td><em>Lunch</em></td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(13, 00);
+								$end     = date_create('now');
+								$end->setTime(14, 00);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Hack Continues</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(14, 00);
+								$end     = date_create('now');
+								$end->setTime(14, 10);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Team 1 Presentation</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(14, 15);
+								$end     = date_create('now');
+								$end->setTime(14, 25);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Team 2 Presentation</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(14, 30);
+								$end     = date_create('now');
+								$end->setTime(14, 40);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Team 3 Presentation</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(14, 45);
+								$end     = date_create('now');
+								$end->setTime(14, 55);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Team 4 Presentation</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+							<?php
+								$start   = date_create('now');
+								$start->setTime(14, 55);
+								$end     = date_create('now');
+								$end->setTime(15, 00);
+
+								$is_showing = '';
+								if($now >= $start && $now <= $end)
+									$is_showing = 'highlight';
+
+								echo '
+								<tr class="' . $is_showing . '">
+									<td>Prize Awarded</td>
+									<td>' . $start->format('H:i') . '</td>
+									<td>' . $end->format('H:i') . '</td>
+								</tr>
+								';
+							?>
+						</tbody>
+					</table>
+				</section>
                 <section>
                     <ul>
-                        <li><span class="blue-text">What is a hack day?</span></li>
+                        <li><span class="blue-text">Fire alarm</span>
+							<ul>
+								<li><span class="grey-text">No alarm is scheduled for today so if the alarm does go off please use the stairs to leave the building and gather outside the front of the Suttie Centre</span></li>
+							</ul>
+						</span></li>
+                        <li><span class="blue-text">Toilets</span>
+							<ul>
+								<li><span class="grey-text">Toilets are available at either exit of this room simply follow the signs</span></li>
+							</ul>
+						</span></li>						
                     </ul>
-                    <p>A hackathon is an event in which computer programmers and others involved in software development, including graphic designers, interface designers and project managers, collaborate intensively on software projects. Occasionally, there is a hardware component as well.</p>
-                </section>
-                <section>
-                    <ul>
-                        <li><span class="blue-text">What is the procedure?</span>
-                            <ul><li><span class="grey-text">Split up into groups of 2 or 3</span></li></ul>
-                        </li>
-                    </ul>
-                </section>
-                <section class="justified-text">
-                    <ul>
-                        <li><span class="blue-text">Continuous Integration</span></li>
-                            <ul><li><a href="http://www.thoughtworks.com/continuous-integration">http://www.thoughtworks.com/continuous-integration</a></li></ul>
-                        </li>
-                    </ul>
-                    <p>Continuous Integration (CI) is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early.</p>
-                    <p>By integrating regularly, you can detect errors quickly, and locate them more easily.</p>
-                    </p>
-                </section>
+                </section>				
                 <section>
                     <ul>
                         <li><span class="blue-text">CSS Preprocessors</span></li>
                     </ul>
                     <p>
-                        <a href="http://sass-lang.com/" target="_blank"><a href="" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>sass.png"></a>
                         <a href="http://lesscss.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>less.png"></a>
+                        <a href="http://sass-lang.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>sass.png"></a>
                     </p>
                 </section>
                 <section>
@@ -175,17 +458,19 @@
                         <li><span class="blue-text">Front-end Frameworks</span></li>
                     </ul>
                     <p>
-                        <a href="http://foundation.zurb.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>foundation.png"></a>
                         <a href="http://getbootstrap.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>twitter-bootstrap.png"></a>
+                        <a href="http://foundation.zurb.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>foundation.png"></a>
                         <a href="http://semantic-ui.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>semantic-ui.png"></a>
                     </p>
                 </section>
                 <section>
                     <ul>
-                        <li><span class="blue-text">Text Editors / IDEs</span></li>
+                        <li><span class="blue-text">Text Editors / IDEs</span>
+							<ul><li><span class="grey-text">(Including plugins)</span></li></ul>
+						</li>
                     </ul>
                     <p>
-                        <a href="http://www.sublimetext.com/3" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>sublime-text.png"></a>
+                        <a href="http://www.sublimetext.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>sublime-text.png"></a>
                         <a href="http://notepad-plus-plus.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>notepad++.png"></a>
                         <a href="http://www.jetbrains.com/phpstorm/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>phpstorm.png"></a>
                         <a href="http://brackets.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>brackets.png"></a>
@@ -194,7 +479,7 @@
                 </section>
                 <section>
                     <ul>
-                        <li><span class="blue-text">Task Runners</span></li>
+                        <li><span class="blue-text">JavaScript Task Runners</span></li>
                     </ul>
                     <p>
                         <a href="http://gruntjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>grunt.png"></a>
@@ -222,7 +507,7 @@
                 </section>
                 <section>
                     <ul>
-                        <li><span class="blue-text">Cloud Platforms</span></li>
+                        <li><span class="blue-text">Cloud Hosting Platforms</span></li>
                     </ul>
                     <p>
                         <a href="https://www.heroku.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>heroku.png"></a>
@@ -235,8 +520,8 @@
                         <li><span class="blue-text">JavaScript MVW Frameworks</span></li>
                     </ul>
                     <p>
-                        <a href="https://angularjs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>angularjs.png"></a>
                         <a href="http://emberjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>emberjs.png"></a>
+                        <a href="https://angularjs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>angularjs.png"></a>
                         <a href="http://backbonejs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>backbonejs.png"></a>
                     </p>
                 </section>
@@ -258,19 +543,21 @@
                         <li><span class="blue-text">JavaScript File and Module Loaders</span></li>
                     </ul>
                     <p>
-                        <a href="http://requirejs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>requirejs.png"></a>
                         <a href="http://browserify.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>browserify.png"></a>
+                        <a href="http://requirejs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>requirejs.png"></a>
                         <a href="http://www.commonjs.org/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>commonjs.png"></a>
                     </p>
                 </section>
+				<!--
                 <section>
                     <ul>
                         <li><span class="blue-text">Automated Testing</span></li>
                     </ul>
                     <p>
-                        <a href="http://dalekjs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>dalekjs.png"></a>
+                        <a href="http://dalekjs.com/" target="_blank"><img src="<?php //echo LOGOS_IMAGES_PATH ?>dalekjs.png"></a>
                     </p>
                 </section>
+				-->
                 <section>
                     <ul>
                         <li><span class="blue-text">PHP Frameworks</span></li>
@@ -285,8 +572,8 @@
                         <li><span class="blue-text">JavaScript Libraries</span></li>
                     </ul>
                     <p>
-                        <a href="http://jquery.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jquery.png"></a>
                         <a href="http://zeptojs.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>zepto.png"></a>
+                        <a href="http://jquery.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jquery.png"></a>
                         <a href="http://mootools.net/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>mootools.png"></a>
                     </p>
                 </section>
@@ -295,9 +582,9 @@
                         <li><span class="blue-text">Cloud Editors/IDEs</span></li>
                     </ul>
                     <p>
+                        <a href="https://koding.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>koding.png"></a>
                         <a href="https://shiftedit.net/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>shiftedit.png"></a>
                         <a href="https://c9.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>cloud9.png"></a>
-                        <a href="https://koding.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>koding.png"></a>
                         <a href="https://panic.com/coda/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>coda.png"></a>
                     </p>
                 </section>
@@ -306,9 +593,9 @@
                         <li><span class="blue-text">Code Playgrounds</span></li>
                     </ul>
                     <p>
+                        <a href="http://jsbin.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jsbin.png"></a>
                         <a href="http://codepen.io/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>codepen.png"></a>
                         <a href="http://jsfiddle.net/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jsfiddle.png"></a>
-                        <a href="http://jsbin.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>jsbin.png"></a>
                         <a href="http://cssdeck.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>cssdeck.png"></a>
                     </p>
                 </section>
@@ -321,6 +608,50 @@
                         <a href="http://snap-ci.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>snapci.png"></a>
                         <a href="http://travis-ci.com/" target="_blank"><img src="<?php echo LOGOS_IMAGES_PATH ?>travisci.png"></a>
                     </p>
+                </section>
+                <section class="justified-text">
+                    <ul>
+                        <li><span class="blue-text">Continuous Integration</span></li>
+                            <ul><li><a href="http://www.thoughtworks.com/continuous-integration" target="_blank">http://www.thoughtworks.com/continuous-integration</a></li></ul>
+                        </li>
+                    </ul>
+                    <p>Continuous Integration (CI) is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early.</p>
+                    <p>By integrating regularly, you can detect errors quickly, and locate them more easily.</p>
+					<br />
+					<ul>
+						<li><span class="blue-text">The practices</span>
+							<ul>
+								<li><span class="grey-text">Maintain a single source repository</span></li>
+								<li><span class="grey-text">Automate the build</span></li>
+								<li><span class="grey-text">Make your build self-testing</span></li>
+								<li><span class="grey-text">Automate deployment</span></li>
+								<li><span class="grey-text">...</span></li>
+							</ul>
+						</li>
+					</ul>
+                </section>
+                <section class="justified-text">
+                    <ul>
+                        <li><span class="blue-text">An example of creating a prototype as part of a hack session is the use of reveal.js which powers these slides</span>
+							<ul>
+								<li><span class="grey-text">Created a template project with correct configuration</span>
+									<ul><li><span class="grey-text">Can be re-used in future presentations</span></li></ul>
+								</li>
+								<li><span class="grey-text">Repo synced to GitHub</span></li>
+								<li><span class="grey-text">Hosted in Heroku</span></li>
+								<li><span class="grey-text">Commits automatically refresh live version stored in Heroku using Snap CI</span></li>
+							</ul>
+						</li>
+					</ul>
+                </section>
+                <section class="justified-text">
+                    <ul>
+                        <li><span class="blue-text">Prize</span></li>
+					</ul>
+					<p>A prize will be awarded to the team who demonstrates the best comparison and the most influential sales pitch for using/paying for the tool.</p>
+                </section>
+                <section>
+                    <h1 class="blue-text">Happy Coding! ☺</h1>
                 </section>
             </div>
         </div><!-- .reveal -->

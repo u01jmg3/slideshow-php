@@ -89,8 +89,8 @@
     define('CSS_PATH', SITE_ROOT . 'css/');
     define('PRINT_CSS_PATH', CSS_PATH . 'print/');
     define('THEME_CSS_PATH', CSS_PATH . 'theme/');
-    define('IMAGE_PATH', SITE_ROOT . 'images/');
-    define('LOGOS_IMAGES_PATH', IMAGE_PATH . 'logos/');
+    define('IMAGES_PATH', SITE_ROOT . 'images/');
+    define('LOGOS_IMAGES_PATH', IMAGES_PATH . 'logos/');
     define('INCLUDES_PATH', SITE_ROOT . 'includes/');
     define('GLOBAL_INCLUDES_PATH', INCLUDES_PATH . 'global/');
     define('LIB_PATH', SITE_ROOT . 'lib/');
