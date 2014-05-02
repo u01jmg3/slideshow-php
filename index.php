@@ -652,7 +652,7 @@
                     <p>A prize will be awarded to the team who demonstrates the best comparison and the most influential sales pitch for using/paying for the tool.</p>
                 </section>
                 <section>
-                    <h1 class="blue-text">Happy Coding! ☺</h1>
+                    <h1 class="blue-text">Happy Coding! ☺ ...</h1>
                 </section>
             </div>
         </div><!-- .reveal -->
