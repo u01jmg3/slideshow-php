@@ -654,6 +654,34 @@
                 <section>
                     <h1 class="blue-text">Happy Coding! ☺ ...</h1>
                 </section>
+                <section>
+                    <ul>
+                        <li><span class="blue-text">Teams</span>
+                            <ul>
+                                <li><span class="grey-text">Team 1 - PHP Frameworks</span>
+                                    <ul><li><span class="grey-text">Scott</span></li></ul>
+                                    <ul><li><span class="grey-text">Andrew F</span></li></ul>
+                                </li>
+                                <li><span class="grey-text">Team 2 - JavaScript Task Runners</span>
+                                    <ul><li><span class="grey-text">Jonny</span></li></ul>
+                                    <ul><li><span class="grey-text">Andrew M</span></li></ul>
+                                </li>
+                                <li><span class="grey-text">Team 3 - CSS Preprocessors</span>
+                                    <ul><li><span class="grey-text">Tracy</span></li></ul>
+                                    <ul><li><span class="grey-text">Kyle</span></li></ul>
+                                </li>
+                                <li><span class="grey-text">Team 4 - Continuous Deployment</span>
+                                    <ul><li><span class="grey-text">Michael W</span></li></ul>
+                                    <ul><li><span class="grey-text">Angela</span></li></ul>
+                                </li>
+                                <li><span class="grey-text">Team 5 - Text Editors</span>
+                                    <ul><li><span class="grey-text">Michael D</span></li></ul>
+                                    <ul><li><span class="grey-text">James</span></li></ul>
+                                </li>                                
+                            </ul>
+                        </li>
+                    </ul>
+                </section>                
             </div>
         </div><!-- .reveal -->
 
