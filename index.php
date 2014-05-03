@@ -411,9 +411,27 @@
                             ?>
                             <?php
                                 $start   = date_create('now');
-                                $start->setTime(14, 55);
+                                $start->setTime(15, 00);
                                 $end     = date_create('now');
-                                $end->setTime(15, 00);
+                                $end->setTime(15, 10);
+
+                                $is_showing = '';
+                                if($now >= $start && $now <= $end)
+                                    $is_showing = 'highlight';
+
+                                echo '
+                                <tr class="' . $is_showing . '">
+                                    <td>Team 5 Presentation</td>
+                                    <td>' . $start->format('H:i') . '</td>
+                                    <td>' . $end->format('H:i') . '</td>
+                                </tr>
+                                ';
+                            ?>                            
+                            <?php
+                                $start   = date_create('now');
+                                $start->setTime(15, 15);
+                                $end     = date_create('now');
+                                $end->setTime(15, 20);
 
                                 $is_showing = '';
                                 if($now >= $start && $now <= $end)
@@ -652,7 +670,7 @@
                     <p>A prize will be awarded to the team who demonstrates the best comparison and the most influential sales pitch for using/paying for the tool.</p>
                 </section>
                 <section>
-                    <h1 class="blue-text">Happy Coding! ☺ ...</h1>
+                    <h1 class="blue-text">Happy Coding! ☺</h1>
                 </section>
                 <section>
                     <ul>
@@ -674,14 +692,14 @@
                                     <ul><li><span class="grey-text">Michael W</span></li></ul>
                                     <ul><li><span class="grey-text">Angela</span></li></ul>
                                 </li>
-                                <li><span class="grey-text">Team 5 - Text Editors</span>
+                                <li><span class="grey-text">Team 5 - Text Editors - *Winners*</span>
                                     <ul><li><span class="grey-text">Michael D</span></li></ul>
                                     <ul><li><span class="grey-text">James</span></li></ul>
-                                </li>                                
+                                </li>
                             </ul>
                         </li>
                     </ul>
-                </section>                
+                </section>
             </div>
         </div><!-- .reveal -->
 
